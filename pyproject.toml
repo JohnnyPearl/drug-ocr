@@ -1,0 +1,27 @@
+[project]
+name = "medifind-ocr"
+version = "0.1.0"
+description = "OCR microservice for MediFind: extracts drug names, quantities and dosage from Vietnamese prescription images."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.124.2",
+    "openai>=2.9.0",
+    "opencv-python>=4.12.0.88",
+    "paddleocr>=3.3.2",
+    "paddlepaddle>=3.2.2",
+    "python-dotenv>=1.2.1",
+    "python-multipart>=0.0.20",
+    "requests>=2.32.0",
+    "uvicorn>=0.38.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
